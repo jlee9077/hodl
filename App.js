@@ -1,17 +1,16 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Header } from './components';
-import Store from './reducers/Store';
-import Provider from 'react-redux';
+import { Header, Coin } from './components';
+// import Store from './store/reducer';
+// import {Provider} from 'react-redux';
 
 export default class App extends React.Component {
   render() {
     return (
-      <Provider store={Store}>
         <View>
           <Header />
+          <Coin />
         </View>
-      </Provider>
     );
   }
 }

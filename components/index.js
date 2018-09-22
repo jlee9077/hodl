@@ -1,3 +1,4 @@
-import Header from './Header'
+import Header from './Header';
+import Coin from './Coin';
 
-export { Header }
+export { Header, Coin };
