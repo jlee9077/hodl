@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import axios from 'axios';
 import apiPub from './ApiPub';
 import images from './Img';
+import {Crypto} from './index'
 
 export default class Coin extends Component {
   constructor() {
@@ -33,7 +34,8 @@ export default class Coin extends Component {
         {
           coins.map(coin => {
             return (
-              <Text>{coin.name} {coin.symbol}</Text>
+              // <Text>{coin.name} {coin.symbol}</Text>
+              <Crypto key={coin.id} coin={coin}/>
             )
           })
         }
