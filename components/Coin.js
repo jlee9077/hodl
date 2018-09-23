@@ -30,6 +30,13 @@ export default class Coin extends Component {
     console.log('This is COINS', coins);
     return coins ? (
       <View>
+        {
+          coins.map(coin => {
+            return (
+              <Text>{coin.name} {coin.symbol}</Text>
+            )
+          })
+        }
         <Text>This is Loaded</Text>
       </View>
     ) : (
