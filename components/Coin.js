@@ -4,6 +4,7 @@ import axios from 'axios';
 import apiPub from './ApiPub';
 import images from './Img';
 import {Crypto} from './index'
+import Graph from './Graph'
 
 export default class Coin extends Component {
   constructor() {
@@ -37,7 +38,8 @@ export default class Coin extends Component {
             )
           })
         }
-        <Text>This is Loaded</Text>
+        <Graph />
+
       </View>
     ) : (
       <Text>FAIL</Text>
