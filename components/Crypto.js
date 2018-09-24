@@ -12,7 +12,12 @@ const Crypto = props => {
         <Text style={styles.name}>{coin.name}</Text>
         <Text style={styles.divide}>|</Text>
         <Text style={styles.symbol}>{coin.symbol}</Text>
-        <Text style={styles.price}>{coin.quotes.USD.price}</Text>
+        <Text style={styles.price}>
+          {coin.quotes.USD.price}
+          <Text style={styles.cashMoney}>
+            $
+          </Text>
+        </Text>
       </View>
     </View>
   ) : (
@@ -21,6 +26,9 @@ const Crypto = props => {
 };
 
 const styles = StyleSheet.create({
+  cashMoney: {
+    fontWeight: 'bold'
+  },
   image: {
     width: 35,
     height: 35,
