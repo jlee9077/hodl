@@ -10,7 +10,7 @@ const PieGraph = props => {
 
   return info ? (
     <View>
-      <Text>Bezier Line Chart</Text>
+      <Text style={styles.title}>Crypto Share Float</Text>
       <PieChart
         data={pieChartInfo}
         width={Dimensions.get('window').width}
@@ -25,5 +25,13 @@ const PieGraph = props => {
     <Text>Loading</Text>
   );
 };
+
+const styles = StyleSheet.create({
+  title: {
+    fontWeight: 'bold',
+    fontSize: 20,
+    textAlign: 'center',
+  },
+});
 
 export default PieGraph;

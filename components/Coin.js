@@ -3,9 +3,9 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import axios from 'axios';
 import apiPub from './ApiPub';
 import images from './Img';
-import {Crypto} from './index'
-import Graph from './Graph'
-import PieGraph from './PieGraph'
+import { Crypto } from './index';
+import Graph from './Graph';
+import PieGraph from './PieGraph';
 
 export default class Coin extends Component {
   constructor() {
@@ -28,22 +28,17 @@ export default class Coin extends Component {
   }
 
   renderCoin() {
-    const { coins, loading } = this.state;
+    const { coins } = this.state;
 
     return coins ? (
       <View>
-        {
-          coins.map(coin => {
-            return (
-              <Crypto key={coin.id} coin={coin}/>
-            )
-          })
-        }
-        {/* <Graph info={coins}/> */}
-        <PieGraph info ={coins}/>
+        <PieGraph info={coins} />
+        {coins.map(coin => {
+          return <Crypto key={coin.id} coin={coin} />;
+        })}
       </View>
     ) : (
-      <Text>FAIL</Text>
+      <Text>No Dice!</Text>
     );
   }
   render() {
@@ -52,12 +47,11 @@ export default class Coin extends Component {
         {this.renderCoin()}
       </ScrollView>
     );
-
   }
 }
 
 const styles = StyleSheet.create({
   contentContainer: {
-    paddingVertical: 20
-  }
-})
+    paddingVertical: 20,
+  },
+});

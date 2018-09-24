@@ -13,21 +13,19 @@ const Crypto = props => {
         <Text style={styles.divide}>|</Text>
         <Text style={styles.symbol}>{coin.symbol}</Text>
         <Text style={styles.price}>
+          <Text style={styles.cashMoney}>$</Text>
           {coin.quotes.USD.price}
-          <Text style={styles.cashMoney}>
-            $
-          </Text>
         </Text>
       </View>
     </View>
   ) : (
-    <Text>Loading</Text>
+    <Text>No Dice!</Text>
   );
 };
 
 const styles = StyleSheet.create({
   cashMoney: {
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   image: {
     width: 35,
@@ -38,12 +36,12 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     borderBottomColor: 'orange',
     borderBottomWidth: 4,
-    padding: 10
+    padding: 10,
   },
   name: {
     marginTop: 10,
     marginLeft: 5,
-    marginRight: 10
+    marginRight: 10,
   },
   divide: {
     marginTop: 10,
@@ -63,8 +61,8 @@ const styles = StyleSheet.create({
   line: {
     display: 'flex',
     flexDirection: 'row',
-    marginBottom: 10
-  }
+    marginBottom: 10,
+  },
 });
 
 export default Crypto;

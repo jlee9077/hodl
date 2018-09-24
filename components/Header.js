@@ -7,9 +7,7 @@ class Header extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>
-          HODLER 4 LIFE
-        </Text>
+        <Text style={styles.title}>HODLER 4 LIFE</Text>
       </View>
     );
   }
@@ -24,6 +22,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 25,
     alignItems: 'center',
+    color: 'white',
   },
 });
 
