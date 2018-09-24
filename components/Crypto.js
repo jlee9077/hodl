@@ -7,11 +7,13 @@ const Crypto = props => {
 
   return coin ? (
     <View style={styles.container}>
-      <Image style={styles.image} source={{ uri: images[coin.symbol] }} />
-      <Text>{coin.name}</Text>
-      <Text style={styles.divide}>|</Text>
-      <Text>{coin.symbol}</Text>
-      <Text style={styles.price}>{coin.quotes.USD.price}</Text>
+      <View style={styles.line}>
+        <Image style={styles.image} source={{ uri: images[coin.symbol] }} />
+        <Text style={styles.name}>{coin.name}</Text>
+        <Text style={styles.divide}>|</Text>
+        <Text style={styles.symbol}>{coin.symbol}</Text>
+        <Text style={styles.price}>{coin.quotes.USD.price}</Text>
+      </View>
     </View>
   ) : (
     <Text>Loading</Text>
@@ -26,13 +28,34 @@ const styles = StyleSheet.create({
   container: {
     display: 'flex',
     marginBottom: 10,
+    borderBottomColor: 'orange',
+    borderBottomWidth: 4,
+    padding: 10
   },
-  text: {},
+  name: {
+    marginTop: 10,
+    marginLeft: 5,
+    marginRight: 10
+  },
   divide: {
-    marginTop: 5
+    marginTop: 10,
   },
   price: {
-
+    marginTop: 10,
+    marginLeft: 'auto',
+    marginRight: 5,
+    fontWeight: 'bold',
+  },
+  symbol: {
+    marginTop: 10,
+    marginLeft: 10,
+    marginRight: 5,
+    fontWeight: 'bold',
+  },
+  line: {
+    display: 'flex',
+    flexDirection: 'row',
+    marginBottom: 10
   }
 });
 
