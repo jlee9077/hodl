@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Button, ImageBackground } from 'react-native';
 import Header from './Header';
-// import BackImg from './Back';
 import background from './Background';
 
 export default class Home extends Component {

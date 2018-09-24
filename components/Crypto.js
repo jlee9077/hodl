@@ -13,7 +13,7 @@ const Crypto = props => {
         <Text style={styles.divide}>|</Text>
         <Text style={styles.symbol}>{coin.symbol}</Text>
         <Text style={styles.price}>
-          <Text style={styles.cashMoney}>$</Text>
+          <Text style={styles.cashMoney}> $ </Text>
           {coin.quotes.USD.price}
         </Text>
       </View>
@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     marginRight: 5,
     fontWeight: 'bold',
+    color: 'green'
   },
   symbol: {
     marginTop: 10,

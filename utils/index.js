@@ -27,7 +27,7 @@ export const pieChartLabel = coinInfo => {
 export const keys = ["Bitcoin", "Litecoin", "Terracoin", "Peercoin", "Novacoin", "Feathercoin", "Mincoin", "Freicoin", "Ixcoin"]
 
 export const chartConfig = {
-  backgroundColor: '#e26a00',
+  backgroundColor: '#fffff',
   backgroundGradientFrom: '#1E2923',
   backgroundGradientTo: '#08130D',
   color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,

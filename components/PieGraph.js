@@ -17,7 +17,7 @@ const PieGraph = props => {
         height={220}
         chartConfig={chartConfig}
         accessor="value"
-        bgColor="transparent"
+        bgColor="#fffff"
         paddingLeft="15"
       />
     </View>
