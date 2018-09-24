@@ -1,50 +1,24 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { PieChart } from 'react-native-svg-charts'
-// import { pieChartData, chartConfig } from '../utils';
+// import React from 'react';
+// import { StyleSheet, Text, View } from 'react-native';
+// import { PieChart } from 'react-native-svg-charts';
+// import { pieChartData, pieChartLabel, chartConfig, keys } from '../utils';
 
-export default class Graph extends React.PureComponent {
+// // export default class Graph extends React.PureComponent {
 
-  render() {
+// const Graph = props => {
+//   const { info } = props;
+//   const pieChartInfo = pieChartData(info);
+//   const labels = pieChartLabel(info)
 
-    const data = [
-        {
-            key: 1,
-            value: 50,
-            svg: { fill: '#600080' },
-            arc: { outerRadius: '130%', cornerRadius: 10,  }
-        },
-        {
-            key: 2,
-            value: 50,
-            svg: { fill: '#9900cc' }
-        },
-        {
-            key: 3,
-            value: 40,
-            svg: { fill: '#c61aff' }
-        },
-        {
-            key: 4,
-            value: 95,
-            svg: { fill: '#d966ff' }
-        },
-        {
-            key: 5,
-            value: 35,
-            svg: { fill: '#ecb3ff' }
-        }
-    ]
+//   return (
+//     <PieChart
+//       style={{ height: 200 }}
+//       outerRadius={'70%'}
+//       innerRadius={10}
+//       data={pieChartInfo}
+//     >
+//     </PieChart>
+//   );
+// };
 
-
-    return (
-        <PieChart
-            style={{ height: 200 }}
-            outerRadius={'70%'}
-            innerRadius={10}
-            data={data}
-        />
-    )
-}
-
-}
+// export default Graph;

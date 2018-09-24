@@ -9,8 +9,9 @@ const Crypto = props => {
     <View style={styles.container}>
       <Image style={styles.image} source={{ uri: images[coin.symbol] }} />
       <Text>{coin.name}</Text>
+      <Text style={styles.divide}>|</Text>
       <Text>{coin.symbol}</Text>
-      <Text>{coin.quotes.USD.price}</Text>
+      <Text style={styles.price}>{coin.quotes.USD.price}</Text>
     </View>
   ) : (
     <Text>Loading</Text>
@@ -27,6 +28,12 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   text: {},
+  divide: {
+    marginTop: 5
+  },
+  price: {
+
+  }
 });
 
 export default Crypto;

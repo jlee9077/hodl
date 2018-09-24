@@ -5,6 +5,7 @@ import apiPub from './ApiPub';
 import images from './Img';
 import {Crypto} from './index'
 import Graph from './Graph'
+import PieGraph from './PieGraph'
 
 export default class Coin extends Component {
   constructor() {
@@ -38,8 +39,8 @@ export default class Coin extends Component {
             )
           })
         }
-        <Graph />
-
+        {/* <Graph info={coins}/> */}
+        <PieGraph info ={coins}/>
       </View>
     ) : (
       <Text>FAIL</Text>
